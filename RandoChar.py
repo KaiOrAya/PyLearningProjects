@@ -177,7 +177,7 @@ if job == 'Bard':
     wepProf = wepProf + ['Simple Weapons'] + ['Hand Crossbows'] + ['Longswords'] + ['rapiers'] + ['Shortswords']
     toolsProf = toolsProf + [instruments[0,len(instruments)-1]] + [instruments[0,len(instruments)-1]] + [instruments[0,len(instruments)-1]]
     skills = skills + [randSkill[0,len(randSkill)-1]] + [randSkill[0,len(randSkill)-1]] + [randSkill[0,len(randSkill)-1]]
-    cFeatures = ['Spellcasting', 'Bardic Inspiration: Use a Bonus Action on your turn to choose one creater within 60ft who can hear you. Creature gains one Bardic Inspiration die (d6). Once within 10mins the creature can add the die roll to one ability check, attack roll, or saving throw. Can be used a number of times equal to the CHA mod and is regained on finishing a long rest.']
+    cFeatures = cFeatures + ['Spellcasting'] + ['Bardic Inspiration: Use a Bonus Action on your turn to choose one creater within 60ft who can hear you. Creature gains one Bardic Inspiration die (d6). Once within 10mins the creature can add the die roll to one ability check, attack roll, or saving throw. Can be used a number of times equal to the CHA mod and is regained on finishing a long rest.']
     cantripsKnown = 2
     spellsKnown = 4
     firstLvlSpells = 2
@@ -209,7 +209,7 @@ elif job == 'Barbarian':
     wepProf = wepProf + ['Simple Weapons'] + ['Martial Weapons']
     barbSkill = ['Animal Handling', 'Athletics', 'Intimidation', 'Nature', 'Perception', 'Survival']
     skills = skills + [barbSkill(random.randint(0,len(barbSkill)-1))] + [barbSkill(random.randint(0,len(barbSkill)-1))]
-    cFeatures = ['Rage: Advantage on STR checks and saving throws. When making a melee weapon attack using STR add Rage Damage to damage roll', 'Unarmored Defense: While not wearing any armor your AC=10+Dex Modifier+Con Modifier. You can use a shield and still gain this benefit', 'Rage Damage: +2', 'Rages: 2']
+    cFeatures = cfeatures + ['Rage: Advantage on STR checks and saving throws. When making a melee weapon attack using STR add Rage Damage to damage roll'] + ['Unarmored Defense: While not wearing any armor your AC=10+Dex Modifier+Con Modifier. You can use a shield and still gain this benefit'] + ['Rage Damage: +2'] + ['Rages: 2']
 elif job == 'Cleric':
     hp = 8 + conMod
     hd = '1d8'
@@ -219,7 +219,7 @@ elif job == 'Cleric':
     clericSkill = ['History', 'Insight', 'Medicine', 'Persuasion', 'Religion']
     skills = skills + [clericSkill(random.randint(0,len(clericSkill)-1))] + [clericSkill(random.randint(0,len(clericSkill)-1))]
     divDomain = ['Life', ]
-    cFeatures = ['Spellcasting', divDomain]
+    cFeatures = cFeatures + ['Spellcasting'] + [divDomain]
     cantripsKnown = 3
     firstLvlSpells = 2
     secondLvlSpells = 0
@@ -250,7 +250,7 @@ elif job == 'Druid':
     wepProf = wepProf + ['Clubs'] + ['Daggers'] + ['Darts'] + ['Javelins'] + ['Maces'] + ['Quarterstaffs'] + ['Scimitars'] + ['Sickles'] + ['Slings'] + ['Spears']
     druidSkill = ['Arcana', 'Animal Handling', 'Insight', 'Medicine', 'Nature', 'Perception', 'Religion', 'Survival']
     skills = skills + [druidSkill(random.randint(0,len(druidSkill)-1))] + [druidSkill(random.randint(0,len(druidSkill)-1))]
-    cFeatures = ['Spellcasting', 'Druidic']
+    cFeatures = cFeatures + ['Spellcasting'] + ['Druidic']
     languages = languages + ['Druidic']
     cantripsKnown = 2
     firstLvlSpells = 2
@@ -294,7 +294,7 @@ elif job == 'Ranger':
     skills = skills + [rangerSkill(random.randint(0,len(rangerSkill)-1))] + [rangerSkill(random.randint(0,len(rangerSkill)-1))]
     favEnemy = ['Abberations', 'Beasts', 'Celestials', 'Constructs', 'Dragons', 'Elementals', 'Fey', 'Fiends', 'Giants', 'Monstrosities', 'Oozes', 'Plants', 'Undead', 'Gnolls', 'Orcs', 'Humans', 'Elves',
     'Tieflings', 'Dwarves', 'Gnomes', 'Halflings']
-    cFeatures = ['Favored Enemy: ' + favEnemy, 'Natural Explorer']
+    cFeatures = cFeatures + ['Favored Enemy: ' + favEnemy] + ['Natural Explorer']
 #elif job == 'Rogue':
 
 #elif job == 'Paladin':
